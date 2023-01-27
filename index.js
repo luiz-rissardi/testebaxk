@@ -1,5 +1,6 @@
-const express = require("express")
-const routers = require("./router")
+import express from "express"
+import routers from "./router"
+
 
 class App {
     app
