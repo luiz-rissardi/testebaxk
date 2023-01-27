@@ -1,6 +1,4 @@
-import { Router  } from "express"
-
-const router = Router()
+const router = require("express").Router()
 
 router.get("/",(req,res)=>{
     let date  =new Date()
@@ -9,4 +7,4 @@ router.get("/",(req,res)=>{
     })
 })
 
-export {router}
+module.exports = router

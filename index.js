@@ -1,5 +1,5 @@
-import express from "express"
-import {router} from "./router.js"
+const express = require("express")
+const routers = require("./router")
 
 
 class App {
@@ -16,5 +16,5 @@ class App {
     }
 }
 
-const app = new App(router)
+const app = new App(routers)
 app.InitApp()
