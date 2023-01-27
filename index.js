@@ -1,17 +1,19 @@
-const express  = require("express")
-const router = express.Router()
+const express = require("express")
+const routers = require("./router")
 
-const app = express()
+class App {
+    app
+    constructor(routes) {
+        this.app = express()
+        this.app.use("/api", routes)
+    }
 
-router.get("/",(req,res)=>{
-    let date  =new Date()
-    res.json({
-        date
-    })
-})
+    InitApp() {
+        this.app.listen(3000, () => {
+            console.log("rodando")
+        })
+    }
+}
 
-app.use("/api",router)
-
-app.listen(3000,()=>{
-    console.log("rodando")
-})
+const app = new App(routers)
+app.InitApp()
