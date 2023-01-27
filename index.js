@@ -1,5 +1,5 @@
 import express from "express"
-import routers from "./router"
+import {router} from "./router"
 
 
 class App {
@@ -16,5 +16,5 @@ class App {
     }
 }
 
-const app = new App(routers)
+const app = new App(router)
 app.InitApp()
