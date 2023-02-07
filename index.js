@@ -10,7 +10,10 @@ class App {
     }
 
     InitApp() {
-        this.app.listen(3000, () => {
+        this.app.get("/",(req,res)=>{
+            res.send("ola mundo")
+        })
+        this.app.listen(process.env.PORT || 3000, () => {
             console.log("rodando")
         })
     }
